@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<html>
+
+{% load staticfiles %}
+<head>
+
+  <br>
+  {{action|safe}}
+  {{analysis|safe}}
+
+
+
+
+<br>
+  <img class="app-graph"  src="{% static "images/startup-0.svg" %}">
+
+
+</head>
+<body>
+
+
+
+{% endblock %}

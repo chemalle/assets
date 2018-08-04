@@ -1,0 +1,69 @@
+
+{% load staticfiles %}
+
+{% block content %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Análise de Mercado</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <meta name="udacity-grader" content="http://udacity.github.io/fend/lessons/L5/problem-set/09-div-soup-clean-up/tests.json">
+  </head>
+  <body>
+    <header class="navbar-static-top">
+      <section class="container">
+          <a class="navbar-brand" href="">ECONOBILIDADE</a>
+          <nav>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://econobilidade.com">About</a></li>
+              <li><a href="https://youtu.be/Q0brUMWilXk">Press</a></li>
+              <li><a href="https://econobilidade.com/contact/">Contact</a></li>
+              <li><a href="http://finance.econobilidade.com/#blog">Blog</a></li>
+            </ul>
+          </nav>
+      </section>
+
+
+    </header>
+
+    <section class="container hero">
+      <div class="hero-image">
+      <img src="{% static "images/105111664-20180123-0454-2548.1910x1000.jpg" %}" width="100%" height="600"></div>
+      <div class="hero-text">
+        <h1 class="headline">Upload</h1>
+        <p class="teaser">Banco de dados historico BOVESPA</p>
+        <button class="btn btn-primary btn-lg" onclick="location.href = '{% url 'upload' %}';">Upload dos dados</button>
+      </div>
+
+    </section>
+
+
+
+
+    <section class="container">
+      <article class="row">
+        <div class="col-md-7">
+          <h2 class="featured-heading"><span class="text-muted"><a id="target">  Análise de mercado </a> </span></h2>
+          <br>
+          <h3>Download dos dados analisados  <strong>agora!</strong></h3>
+
+
+
+        <button class="btn btn-primary btn-lg" onclick="location.href = '{% url 'download' %}';">Download dos dados</button>
+
+
+  </body>
+
+  <br>
+  <br>
+  <br>
+
+  <footer>
+    <p>&copy; 2018 ECONOBILIDADE &middot; <a href="">Privacy Policy</a> &middot; <a href="">Terms &amp; Conditions</a></p>
+  </footer>
+
+</html>
+{% endblock  %}

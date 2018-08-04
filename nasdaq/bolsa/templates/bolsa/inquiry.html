@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+{% load staticfiles %}
+<head>
+
+  <br>
+  <form action="" enctype="multipart/form-data"  method="post">
+  {{df.as_table}}
+   {% csrf_token %}
+  <input type="submit" value="Submit">
+        </form>
+
+
+<br>
+  <img class="app-graph"  src="{% static "images/startup-0.svg" %}">
+
+
+</head>
+<body>
+
+
+
+{% endblock %}
